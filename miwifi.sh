@@ -26,6 +26,12 @@ then
 cd /tmp
 rm -rf *.sh
 # wget http://okss.tk/xiaomi/r2d/r2d_ss.sh
+if [ -s r2d_ss.sh ]; then
+  echo "r2d_ss.sh [found]"
+else
+  echo "Error: r2d_ss.sh not found!!!download now......"
+  curl -o r2d_ss.sh https://raw.githubusercontent.com/boxcore/miwifi-ss/master//r2d_ss.sh
+fi
 chmod -R 777 r2d_ss.sh
 ./r2d_ss.sh
 fi
@@ -43,6 +49,12 @@ if [ "${num}" == "3" ]
 then
 cd /tmp
 rm -rf *.sh
+if [ -s mini_ss.sh ]; then
+  echo "mini_ss.sh [found]"
+else
+  echo "Error: mini_ss.sh not found!!!download now......"
+  curl -o mini_ss.sh https://raw.githubusercontent.com/boxcore/miwifi-ss/master/mini_ss.sh
+fi
 # wget http://okss.tk/xiaomi/mini/mini_ss.sh
 chmod -R 777 mini_ss.sh
 ./mini_ss.sh
@@ -52,6 +64,12 @@ if [ "${num}" == "4" ]
 then
 cd /tmp
 rm -rf *.sh
+if [ -s mini_uninstall.sh ]; then
+  echo "mini_uninstall.sh [found]"
+else
+  echo "Error: mini_uninstall.sh not found!!!download now......"
+  curl -o mini_uninstall.sh https://raw.githubusercontent.com/boxcore/miwifi-ss/master/mini_uninstall.sh
+fi
 # wget http://okss.tk/xiaomi/mini/mini_uninstall.sh
 chmod -R 777 mini_uninstall.sh
 sh mini_uninstall.sh
